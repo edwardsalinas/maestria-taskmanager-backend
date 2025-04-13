@@ -49,7 +49,7 @@ const jwt = require('jsonwebtoken');
 
 const authMiddleware = (req, res, next) => {
 
-  const publicPaths = ['/api/auth/register', '/api/auth/login', '/','/register', '/login'];
+  const publicPaths = ['/api/auth/register', '/api/auth/login', '/','/auth/register', '/auth/login'];
   if (publicPaths.includes(req.path)) {
     return next();
   }
