@@ -19,6 +19,7 @@ app.use(cors({
   origin: [
     'https://maestria-taskmanager-frontend.vercel.app', // Producción
     /https:\/\/maestria-taskmanager-frontend-.*-edward-salinas-projects\.vercel\.app/, // Previews
+    'https://majestic-muffin-464472.netlify.app',
     'http://localhost:5173' // Desarrollo local
   ],
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
