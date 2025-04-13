@@ -16,7 +16,7 @@ connectDB();
 
 // Middlewares
 app.use(cors({
-  origin: 'https://maestria-taskmanager-frontend.vercel.app',
+  origin: 'https://maestria-taskmanager-frontend.vercel.app/api',
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
   allowedHeaders: ['Content-Type', 'Authorization']
 }));
