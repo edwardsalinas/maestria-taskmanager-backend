@@ -15,7 +15,11 @@ const PORT = process.env.PORT || 5000;
 connectDB();
 
 // Middlewares
-app.use(cors());
+app.use(cors({
+  origin: 'https://maestria-taskmanager-frontend.vercel.app',
+  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+  allowedHeaders: ['Content-Type', 'Authorization']
+}));
 app.use(express.json());
 
 // Rutas públicas
