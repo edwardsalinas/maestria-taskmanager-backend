@@ -16,7 +16,11 @@ connectDB();
 
 // Middlewares
 app.use(cors({
-  origin: 'https://maestria-taskmanager-frontend.vercel.app/api',
+  origin: [
+    'https://maestria-taskmanager-frontend.vercel.app', // Producción
+    /https:\/\/maestria-taskmanager-frontend-.*-edward-salinas-projects\.vercel\.app/, // Previews
+    'http://localhost:5173' // Desarrollo local
+  ],
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
   allowedHeaders: ['Content-Type', 'Authorization']
 }));
